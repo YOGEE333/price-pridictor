@@ -55,18 +55,17 @@ def preprocess_inp(data):
     
     return data
 
-#model_url = 'https://github.com/skssohail07/Streamlit01/blob/main/sohailnb/model/model.pkl'
+model_url = 'https://github.com/YOGEE333/price-pridictor/blob/main/model.pkl'
 
-#response = requests.get(model_url)
+response = requests.get(model_url)
 
-model = 'model/model.pkl'
+#model = 'model/model.pkl'
 
-#with open('model.pkl', 'wb') as f:
-#    f.write(response.content)
+with open('model.pkl', 'wb') as f:
+    f.write(response.content)
 
 # Load the model
-with open(model, 'rb') as f:
-    model = dill.load(f)
+model = 'model.pkl'
 
 st.title('Vegetable Price Predictor')
 
