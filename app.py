@@ -61,11 +61,11 @@ response = requests.get(model_url)
 
 #model = 'model/model.pkl'
 
-with open('model.pkl', 'wb') as f:
+with open('model123.pkl', 'wb') as f:
     f.write(response.content)
 
 # Load the model
-model = 'model.pkl'
+model = 'model123.pkl'
 
 st.title('Vegetable Price Predictor')
 
